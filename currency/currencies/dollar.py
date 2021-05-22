@@ -8,4 +8,3 @@ class Dollar:
 
     def equals(self, dollar) -> bool:
         return self.__amount == dollar.__amount
-

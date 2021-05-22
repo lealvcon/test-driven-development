@@ -1,6 +1,6 @@
 import pytest
 from currency.currencies.dollar import Dollar
-
+from currency.currencies.franc import Franc
 
 def test_multiplication():
     five = Dollar(5)
@@ -15,3 +15,9 @@ def test_equality():
 @pytest.mark.xfail
 def test_inequality():
     assert Dollar(5).equals(Dollar(6))
+
+
+def test_franc_multiplication():
+    five = Franc(5)
+    assert Franc(10).equals(five.times(2))
+    assert Franc(15).equals(five.times(3))
